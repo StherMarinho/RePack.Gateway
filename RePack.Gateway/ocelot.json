@@ -7,8 +7,8 @@
 
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5001
+          "Host": "repack-usuario.onrender.com",
+          "Port": 443
         }
       ],
 
@@ -24,8 +24,8 @@
 
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5001
+          "Host": "repack-usuario.onrender.com",
+          "Port": 443
         }
       ],
 
@@ -41,8 +41,8 @@
 
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5001
+          "Host": "repack-usuario.onrender.com",
+          "Port": 443
         }
       ],
 
@@ -56,14 +56,17 @@
       "SwaggerKey": "usuario"
     },
 
+
+
+    /* ENVIOS */
     {
       "DownstreamPathTemplate": "/api/Envio/{everything}",
       "DownstreamScheme": "https",
 
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7159
+          "Host": "repack-envio.onrender.com",
+          "Port": 443
         }
       ],
 
@@ -77,14 +80,17 @@
       "SwaggerKey": "Envio"
     },
 
+
+
+    /* RELATÓRIOS */
     {
       "DownstreamPathTemplate": "/api/relatorio/{everything}",
       "DownstreamScheme": "https",
 
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54955
+          "Host": "repack-relatorio.onrender.com",
+          "Port": 443
         }
       ],
 
@@ -97,18 +103,22 @@
 
       "SwaggerKey": "relatorio"
     },
+
+
+
+    /* EMBALAGENS */
     {
-      "DownstreamPathTemplate": "/api/Embalagem/{everything}",
+      "DownstreamPathTemplate": "/api/embalagens/{everything}",
       "DownstreamScheme": "https",
 
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5205
+          "Host": "repack-embalagens.onrender.com",
+          "Port": 443
         }
       ],
 
-      "UpstreamPathTemplate": "/gateway/Embalagens/{everything}",
+      "UpstreamPathTemplate": "/gateway/embalagens/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
 
       //"AuthenticationOptions": {
@@ -117,14 +127,18 @@
 
       "SwaggerKey": "Embalagem"
     },
+
+
+
+    /* MATERIAL EMBALAGENS */
     {
-      "DownstreamPathTemplate": "/api/materialembalagem/{everything}",
+      "DownstreamPathTemplate": "/api/materialembalagens/{everything}",
       "DownstreamScheme": "https",
 
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5205
+          "Host": "repack-embalagens.onrender.com",
+          "Port": 443
         }
       ],
 
@@ -137,14 +151,18 @@
 
       "SwaggerKey": "materialembalagem"
     },
+
+
+
+    /* EMPRESAS */
     {
       "DownstreamPathTemplate": "/api/empresa/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
 
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5002
+          "Host": "repack-empresa.onrender.com",
+          "Port": 443
         }
       ],
 
@@ -157,14 +175,18 @@
 
       "SwaggerKey": "empresa"
     },
+
+
+
+    /* PONTUAÇÃO */
     {
       "DownstreamPathTemplate": "/api/pontuacao/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
 
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5003
+          "Host": "repack-pontuacao.onrender.com",
+          "Port": 443
         }
       ],
 
@@ -176,6 +198,27 @@
       //},
 
       "SwaggerKey": "pontuacao"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/regrapontuacao/{everything}",
+      "DownstreamScheme": "https",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "repack-pontuacao.onrender.com",
+          "Port": 443
+        }
+      ],
+
+      "UpstreamPathTemplate": "/gateway/regrapontuacoes/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //},
+
+      "SwaggerKey": "regrapontuacao"
     }
   ],
 
