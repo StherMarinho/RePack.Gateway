@@ -1,0 +1,6 @@
+@RePack.Gateway_HostAddress = http://localhost:5143
+
+GET {{RePack.Gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

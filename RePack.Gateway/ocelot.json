@@ -1,0 +1,198 @@
+{
+  "Routes": [
+
+    {
+      "DownstreamPathTemplate": "/api/usuario/login",
+      "DownstreamScheme": "https",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+
+      "UpstreamPathTemplate": "/gateway/usuarios/login",
+      "UpstreamHttpMethod": [ "POST" ],
+
+      "SwaggerKey": "usuario"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/usuario/cadastro",
+      "DownstreamScheme": "https",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+
+      "UpstreamPathTemplate": "/gateway/usuarios/cadastro",
+      "UpstreamHttpMethod": [ "POST" ],
+
+      "SwaggerKey": "usuario"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/usuario/{everything}",
+      "DownstreamScheme": "https",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+
+      "UpstreamPathTemplate": "/gateway/usuarios/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+
+      "SwaggerKey": "usuario"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Envio/{everything}",
+      "DownstreamScheme": "https",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7159
+        }
+      ],
+
+      "UpstreamPathTemplate": "/gateway/Envios/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "PATCH", "DELETE" ],
+
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //},
+
+      "SwaggerKey": "Envio"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/relatorio/{everything}",
+      "DownstreamScheme": "https",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54955
+        }
+      ],
+
+      "UpstreamPathTemplate": "/gateway/relatorios/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //},
+
+      "SwaggerKey": "relatorio"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Embalagem/{everything}",
+      "DownstreamScheme": "https",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5205
+        }
+      ],
+
+      "UpstreamPathTemplate": "/gateway/Embalagens/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //},
+
+      "SwaggerKey": "Embalagem"
+    },
+    {
+      "DownstreamPathTemplate": "/api/materialembalagem/{everything}",
+      "DownstreamScheme": "https",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5205
+        }
+      ],
+
+      "UpstreamPathTemplate": "/gateway/materiasembalagens/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //},
+
+      "SwaggerKey": "materialembalagem"
+    },
+    {
+      "DownstreamPathTemplate": "/api/empresa/{everything}",
+      "DownstreamScheme": "http",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+
+      "UpstreamPathTemplate": "/gateway/empresas/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //},
+
+      "SwaggerKey": "empresa"
+    },
+    {
+      "DownstreamPathTemplate": "/api/pontuacao/{everything}",
+      "DownstreamScheme": "http",
+
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+
+      "UpstreamPathTemplate": "/gateway/pontuacoes/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //},
+
+      "SwaggerKey": "pontuacao"
+    }
+  ],
+
+  "SwaggerEndPoints": [
+    {
+      "Key": "usuario",
+      "Config": [
+        {
+          "Name": "ApiUsuario",
+          "Version": "v1",
+          "Url": "https://localhost:5001/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7000"
+  }
+}
