@@ -95,7 +95,7 @@
       ],
 
       "UpstreamPathTemplate": "/gateway/relatorios/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "PATCH", "DELETE" ],
 
       //"AuthenticationOptions": {
       //  "AuthenticationProviderKey": "Bearer"
@@ -119,7 +119,7 @@
       ],
 
       "UpstreamPathTemplate": "/gateway/embalagens/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "PATCH", "DELETE" ],
 
       //"AuthenticationOptions": {
       //  "AuthenticationProviderKey": "Bearer"
@@ -143,7 +143,7 @@
       ],
 
       "UpstreamPathTemplate": "/gateway/materiasembalagens/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "PATCH", "DELETE" ],
 
       //"AuthenticationOptions": {
       //  "AuthenticationProviderKey": "Bearer"
@@ -167,7 +167,7 @@
       ],
 
       "UpstreamPathTemplate": "/gateway/empresas/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "PATCH", "DELETE" ],
 
       //"AuthenticationOptions": {
       //  "AuthenticationProviderKey": "Bearer"
@@ -191,7 +191,7 @@
       ],
 
       "UpstreamPathTemplate": "/gateway/pontuacoes/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "PATCH", "DELETE" ],
 
       //"AuthenticationOptions": {
       //  "AuthenticationProviderKey": "Bearer"
@@ -212,7 +212,7 @@
       ],
 
       "UpstreamPathTemplate": "/gateway/regrapontuacoes/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "PATCH", "DELETE" ],
 
       //"AuthenticationOptions": {
       //  "AuthenticationProviderKey": "Bearer"
